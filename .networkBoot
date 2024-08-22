@@ -1,1 +1,1 @@
-initFile=/init.lua
+initFile=/init.lua;fileList=init.lua,|boot,00_base.lua,01_process.lua,02_os.lua,03_io.lua,04_component.lua,10_devfs.lua,89_rc.lua,90_filesystem.lua,91_gpu.lua,92_keyboard.lua,93_term.lua,94_shell.lua|
