@@ -72,6 +72,7 @@ status("Booting " .. _OSVERSION .. "...")
 local function dofile(file)
   status("> " .. file)
   local program, reason = raw_loadfile(file)
+  component.proxy(component.list('ocelot')()).log(program)
   if program then
     local result = table.pack(pcall(program))
     if result[1] then
