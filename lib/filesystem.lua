@@ -203,8 +203,6 @@ end
 
 function filesystem.proxy(filter, options)
   checkArg(1, filter, "string")
-  component.proxy(component.list('ocelot')()).log('o ' .. tostring(filter))
-  component.proxy(component.list('ocelot')()).log('o ' .. tostring(not component.list("filesystem")[filter]))
   if not component.list("filesystem")[filter] or next(options or {}) then
     -- if not, load fs full library, it has a smarter proxy that also supports options
     return filesystem.internal.proxy(filter, options)
