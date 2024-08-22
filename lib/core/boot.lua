@@ -70,7 +70,6 @@ status("Booting " .. _OSVERSION .. "...")
 
 -- Custom low-level dofile implementation reading from our ROM.
 local function dofile(file)
-  ocelot.log(file)
   status("> " .. file)
   local program, reason = raw_loadfile(file)
   if program then

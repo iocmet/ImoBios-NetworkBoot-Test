@@ -8,8 +8,6 @@ do
       buffer = buffer .. (data or "")
     until not data
     invoke(addr, "close", handle)
-    ocelot.log(file)
-    ocelot.log(buffer)
     return load(buffer, "=" .. file, "bt", _G)
   end
   loadfile("/lib/core/boot.lua")(loadfile)
